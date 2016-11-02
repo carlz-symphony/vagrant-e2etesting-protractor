@@ -102,8 +102,20 @@ NODEJS_VERSION=$(curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -)
 sudo apt-get install -y nodejs
 sudo npm install -g protractor
 
+#=========================================================
+echo "add webdriver-manager to the startup"
+#=========================================================
+cp -r /vagrant/fbstartup /home/vagrant/.fluxbox/startup
+
+#=========================================================
+echo "updating sudoers file to remove password prompt"
+#=========================================================
+cp -r /vagrant/newsudo /etc/sudoers
 
 #=========================================================
 echo "Reboot the VM"
 #=========================================================
+
 sudo shutdown -r now
+
+
