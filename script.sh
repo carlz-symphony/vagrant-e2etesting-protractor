@@ -105,7 +105,7 @@ sudo npm install -g protractor
 #=========================================================
 echo "add webdriver-manager to the startup"
 #=========================================================
-cp -r /vagrant/fbstartup /home/vagrant/.fluxbox/startup
+touch /home/vagrant/.fluxbox/startup && cp -r /vagrant/fbstartup /home/vagrant/.fluxbox/startup
 
 #=========================================================
 echo "updating sudoers file to remove password prompt"
